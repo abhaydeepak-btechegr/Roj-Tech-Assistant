@@ -1,0 +1,35 @@
+{
+  "entities": {
+    "Lead": {
+      "title": "Lead",
+      "description": "A potential client lead captured from the AI assistant.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the user."
+        },
+        "email_phone": {
+          "type": "string",
+          "description": "The email or phone number of the user."
+        },
+        "requirement": {
+          "type": "string",
+          "description": "A brief description of the user's requirement."
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The time the lead was captured."
+        }
+      },
+      "required": ["name", "email_phone", "requirement", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/leads/{leadId}": {
+      "schema": "Lead",
+      "description": "Collection of leads captured from the website."
+    }
+  }
+}

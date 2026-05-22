@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+.markdown-body {
+  word-wrap: break-word;
+}
+
+.markdown-body p {
+  margin-bottom: 0.5rem;
+}
+
+.markdown-body ul, .markdown-body ol {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.markdown-body li {
+  list-style-type: disc;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
